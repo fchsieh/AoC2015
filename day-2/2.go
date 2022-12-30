@@ -6,6 +6,8 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+
+	"github.com/fchsieh/AoC2015/aocutils"
 )
 
 func read_file(file_name string) []string {
@@ -33,7 +35,7 @@ func part1(data []string) int {
 		l, _ := strconv.Atoi(dimensions[0])
 		w, _ := strconv.Atoi(dimensions[1])
 		h, _ := strconv.Atoi(dimensions[2])
-		total_num += 2*l*w + 2*w*h + 2*h*l + min([]int{l * w, w * h, h * l})
+		total_num += 2*l*w + 2*w*h + 2*h*l + aocutils.MinArray([]int{l * w, w * h, h * l})
 	}
 	return total_num
 }

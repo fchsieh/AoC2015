@@ -65,6 +65,22 @@ def write_default_code(day, code="py"):
             f.write('    test, input = read_data("test.txt"), read_data("input.txt")\n')
             f.write("    # Test(test, solve, -1, -1)\n")
             f.write("    solve(test)\n")
+    elif code == "go":
+        """
+        Write default code for go
+        """
+        with open("day-{}/{}.go".format(day, day), "w") as f:
+            f.write("// Path: day-{}/{}.go\n".format(day, day))
+            f.write("// Solution for day {} of Advent of Code\n".format(day))
+            f.write("package main\n\nimport (\n")
+            f.write('\t"fmt"\n\n\t"github.com/fchsieh/AoC2015/aocutils"\n')
+            f.write(")\n\n")
+            f.write(
+                """func main() {
+\tdata := aocutils.ReadPuzzle("input.txt")
+\tfmt.Println("Part 1:", part1(data))
+\tfmt.Println("Part 2:", part2(data))\n}"""
+            )
 
 
 def set_parser():

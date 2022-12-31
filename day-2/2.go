@@ -2,29 +2,12 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"sort"
 	"strconv"
 	"strings"
 
 	"github.com/fchsieh/AoC2015/aocutils"
 )
-
-func read_file(file_name string) []string {
-	raw_data, _ := os.ReadFile(file_name)
-	data := strings.Fields(string(raw_data))
-	return data
-}
-
-func min(arr []int) int {
-	min := arr[0]
-	for _, x := range arr {
-		if x < min {
-			min = x
-		}
-	}
-	return min
-}
 
 func part1(data []string) int {
 	total_num := 0
@@ -57,7 +40,7 @@ func part2(data []string) int {
 }
 
 func main() {
-	data := read_file("input.txt")
+	data := aocutils.ReadPuzzle("input.txt")
 	fmt.Println("Part 1:", part1(data))
 	fmt.Println("Part 2:", part2(data))
 }

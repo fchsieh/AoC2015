@@ -81,7 +81,7 @@ def write_default_code(day, code="py"):
                 """func main() {
 \tdata := aocutils.ReadPuzzle("input.txt")
 \tfmt.Println("Part 1:", part1(data))
-\tfmt.Println("Part 2:", part2(data))\n}"""
+\tfmt.Println("Part 2:", part2(data))\n}\n"""
             )
 
 

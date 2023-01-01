@@ -34,7 +34,7 @@ func part2(data string) int {
 }
 
 func main() {
-	input, _ := os.ReadFile("input.txt")
+	input, _ := os.ReadFile("./input.txt")
 	data := string(input)
 	fmt.Println("Part 1:", part1(data))
 	fmt.Println("Part 2:", part2(data))

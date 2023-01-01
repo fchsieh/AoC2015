@@ -7,6 +7,8 @@ import (
 
 func ReadPuzzle(file_name string) []string {
 	raw_data, _ := os.ReadFile(file_name)
-	data := strings.Fields(string(raw_data))
+	// separate by new line
+	data := strings.Split(strings.ReplaceAll(string(raw_data), "\r\n", "\n"), "\n")
+
 	return data
 }

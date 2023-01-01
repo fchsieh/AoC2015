@@ -75,6 +75,8 @@ def write_default_code(day, code="py"):
             f.write("package main\n\nimport (\n")
             f.write('\t"fmt"\n\n\t"github.com/fchsieh/AoC2015/aocutils"\n')
             f.write(")\n\n")
+            f.write("func part1(data []string) int {\n\treturn 0\n}\n\n")
+            f.write("func part2(data []string) int {\n\treturn 0\n}\n\n")
             f.write(
                 """func main() {
 \tdata := aocutils.ReadPuzzle("input.txt")
@@ -92,11 +94,7 @@ def set_parser():
     parser.add_argument("--year", "-y", type=int, help="Year of AoC", required=True)
     parser.add_argument("--day", "-d", type=int, help="Day of AoC", required=True)
     parser.add_argument(
-        "--code",
-        "-c",
-        type=str,
-        help="set extension of code file",
-        required=True
+        "--code", "-c", type=str, help="set extension of code file", required=True
     )
     return parser
 

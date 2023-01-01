@@ -96,8 +96,7 @@ def set_parser():
         "-c",
         type=str,
         help="set extension of code file",
-        required=False,
-        default="py",
+        required=True
     )
     return parser
 

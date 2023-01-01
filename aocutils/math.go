@@ -1,5 +1,7 @@
 package aocutils
 
+import "strconv"
+
 func Min(a, b int) int {
 	if a < b {
 		return a
@@ -32,4 +34,14 @@ func MaxArray(arr []int) int {
 		}
 	}
 	return max
+}
+
+func Atoi(s string) int {
+	i, _ := strconv.Atoi(s)
+	return i
+}
+
+func IsNum(s string) bool {
+	_, err := strconv.Atoi(s)
+	return err == nil
 }

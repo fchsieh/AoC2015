@@ -35,3 +35,22 @@ func TestMaxArray(t *testing.T) {
 		t.Error("MaxArray(arr) != 3")
 	}
 }
+
+func TestAtoi(t *testing.T) {
+	tests := []string{"1", "-1", "0", "123", "-123"}
+	vals := []int{1, -1, 0, 123, -123}
+	for i, test := range tests {
+		if Atoi(test) != vals[i] {
+			t.Error("Atoi(\"" + test + "\") != 1")
+		}
+	}
+}
+
+func TestIsNum(t *testing.T) {
+	tests := []string{"1", "-1", "0", "123", "-123"}
+	for _, test := range tests {
+		if !IsNum(test) {
+			t.Error("IsNum(\"" + test + "\") != true")
+		}
+	}
+}
